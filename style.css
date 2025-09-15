@@ -1,3 +1,4 @@
+/* 🎨 Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +12,12 @@ body {
   line-height: 1.6;
 }
 
-/* 🔹 Encabezado con fondo animado */
+/* 🔹 Encabezado */
 header {
-  background: linear-gradient(270deg, #3498db, #2ecc71, #9b59b6);
-  background-size: 600% 600%;
-  animation: moverFondo 12s ease infinite;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
   color: white;
   text-align: center;
   padding: 50px 20px;
-}
-
-@keyframes moverFondo {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 header h1 {
@@ -145,4 +138,20 @@ footer {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 🔹 Skip link (para accesibilidad) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #1abc9c;
+  color: white;
+  padding: 10px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px;
 }
